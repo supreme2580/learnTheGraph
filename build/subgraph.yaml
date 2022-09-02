@@ -1,6 +1,6 @@
 specVersion: 0.0.4
 schema:
-  file: ./schema.graphql
+  file: schema.graphql
 features:
   - ipfsOnEthereumContracts
 dataSources:
@@ -19,8 +19,8 @@ dataSources:
         - Event
       abis:
         - name: StoreContract
-          file: ./abis/StoreContract.json
+          file: StoreContract\abis\StoreContract.json
       eventHandlers:
         - event: NewNameStored(bytes32,string,string)
           handler: handleNewNameStored
-      file: ./src/store-contract.ts
+      file: StoreContract\StoreContract.wasm
